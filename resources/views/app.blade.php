@@ -119,6 +119,14 @@
     <div class="banner_section layout_padding">
         <div class="container-fluid">
             <div class="row">
+                <div class="col-sm-6">
+                    <h1 class="clever_text" style="margin-left:30px">Pengukuran <span
+                            style="color: #212122; ">Ketinggian</span>
+                        Air Berbasis Internet of Things Menggunakan <span style="color: #212122; ">Websocket</span> dan
+                        <span style="color: #212122; ">Lora</span>
+                    </h1>
+
+                </div>
                 <div class="col-sm-6 padding_0">
                     <link rel="stylesheet"
                         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
@@ -204,11 +212,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-5">
-                    <h1 class="clever_text">Pengukuran <span style="color: #212122;">Ketinggian</span>
-                        Air Berbasis IoT</h1>
-                    <div class="read_bt_2"><a href="#">Read More</a></div>
-                </div>
+
             </div>
         </div>
     </div>
