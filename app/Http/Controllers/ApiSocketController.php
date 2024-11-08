@@ -28,7 +28,16 @@ class ApiSocketController extends Controller
                     ->latest('created_at')
                     ->first();
 
-                if ($lastSensorData->sensor != $data['Sensor']) {
+                // Jika tidak ada data sebelumnya, langsung simpan data baru
+                if (!$lastSensorData) {
+                    Sensor::create([
+                        'slave' => $data['ID_Slave'],
+                        'sensor' => $data['Sensor'],
+                        'rssi' => $data['RSSI'],
+                    ]);
+                }
+                // Jika ada data sebelumnya, simpan data baru hanya jika berbeda
+                else if ($lastSensorData->sensor != $data['Sensor']) {
                     Sensor::create([
                         'slave' => $data['ID_Slave'],
                         'sensor' => $data['Sensor'],
@@ -44,6 +53,7 @@ class ApiSocketController extends Controller
             return response()->json(['success' => 'Data saved successfully']);
         } catch (\Throwable $th) {
             Log::info("ini error di api socket");
+            return response()->json(['error' => 'Invalid data from API'], 400);
         }
     }
 }

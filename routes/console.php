@@ -15,4 +15,4 @@ Schedule::call(function () {
     $controller = new ApiSocketController();
     $controller->fetchAndSaveSensorData(1);
     $controller->fetchAndSaveSensorData(2);
-})->everyMinute();
+})->everyTwentySeconds();

@@ -102,7 +102,7 @@
             <div class="row">
                 <div class="col-sm-4">
                     <div class="call_text"><img src="{{ asset('frontend/images/cloud-computing.png') }}"
-                            width="30"><span class="call_text_left">Edge Waterheight</span></div>
+                            width="30"><span class="call_text_left">Lokal Waterheight</span></div>
                 </div>
                 <div class="col-sm-4">
                     <div class="call_text"><span class="call_text_left">Rekayasa Sistem Komputer</span></div>
